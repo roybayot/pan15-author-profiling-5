@@ -278,17 +278,17 @@ def classifyTestFiles(models, inputDir):
 		if tempLang == 'dutch':
 			path1 = cwd + '/model_dir/tfidf-dutch-models.pkl'
 			path2 = cwd + '/model_dir/bigram-dutch-models.pkl'
-			vec = joblib.load(path)
+			vec = joblib.load(path1)
 			bigram_vec = joblib.load(path2)
 		if tempLang == 'italian':
 			path1 = cwd + '/model_dir/tfidf-italian-models.pkl'
 			path2 = cwd + '/model_dir/bigram-italian-models.pkl'
-			vec = joblib.load(path)
+			vec = joblib.load(path1)
 			bigram_vec = joblib.load(path2)
 		if tempLang == 'spanish':
 			path1 = cwd + '/model_dir/tfidf-spanish-models.pkl'
 			path2 = cwd + '/model_dir/bigram-spanish-models.pkl'
-			vec = joblib.load(path)	
+			vec = joblib.load(path1)	
 			bigram_vec = joblib.load(path2)
 	
 		oneLine = getTweetsToLine(oneFile)
